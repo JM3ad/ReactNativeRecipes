@@ -3,9 +3,9 @@ import {Text, View} from 'react-native';
 
 const Recipe: React.FC<RecipeProps> = ({recipe}) => (
   <View>
-    <Text>{recipe.name}</Text>
-    <Text>{recipe.ingredients}</Text>
-    <Text>{recipe.instructions}</Text>
+    <Text>Recipe for: {recipe.name}</Text>
+    <Text>Ingredients: {recipe.ingredients}</Text>
+    <Text>Instructions: Cook the {recipe.instructions}</Text>
   </View>
 );
 
