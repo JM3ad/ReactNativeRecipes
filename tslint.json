@@ -1,0 +1,15 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "rules": {
+        "linebreak-style": [true, "LF"],
+        "quotemark": [true, "single", "avoid-escape"],
+        "semicolon": [true, "always"],
+        "max-line-length": [true, 150],
+        "no-console": [true, "trace", "debug"],
+        "trailing-comma": true
+    },
+    "rulesDirectory": []
+}

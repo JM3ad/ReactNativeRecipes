@@ -23,6 +23,12 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "android": {
+      "package": "uk.co.meadbros.ourrecipes",
+      "versionCode": 1
+    },
+    "description": "Exploring React Native App, eventually intended to be a simple recipe app",
+    "githubUrl": "https://github.com/JM3ad/ReactNativeRecipes"
   }
 }
