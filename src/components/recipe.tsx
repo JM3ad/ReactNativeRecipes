@@ -1,29 +1,30 @@
 import React from 'react';
-import {Button, Text, View} from 'react-native';
+import {Button, FlatList, Text, View} from 'react-native';
 
 const Recipe: React.FC<RecipeProps> = ({recipe}) => (
     <View>
-      <Button title={recipe.name} onPress={() => {}} />
+      <Button title={recipe.name} onPress={() => {
+      }}/>
       <Text>Ingredients:</Text>
-      <ul>
-        {recipe.ingredients.map((ingredient, index) => (
-            <li key={index}>
+      <FlatList
+          data={recipe.ingredients}
+          renderItem={({item}) =>
               <Text>
-                {ingredient}
+                * {item}
               </Text>
-            </li>
-        ))}
-      </ul>
+          }
+          keyExtractor={(ingredient, index) => String(index) }
+      />
       <Text>Instructions:</Text>
-      <ul>
-        {recipe.instructions.map((instruction, index) => (
-            <li key={index}>
+      <FlatList
+          data={recipe.instructions}
+          renderItem={({item}) =>
               <Text>
-                {instruction}
+                * {item}
               </Text>
-            </li>
-        ))}
-      </ul>
+          }
+          keyExtractor={(instruction, index) => String(index) }
+      />
     </View>
 );
 
