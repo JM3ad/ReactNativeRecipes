@@ -1,6 +1,7 @@
 import {RecipeViewModel} from 'components/recipe';
 
 const recipe: RecipeViewModel = {
+  id: 'ssps',
   name: 'Smokey Spanish Bean Stew',
   ingredients: [
     '2 tbsp oil from sun-dried tomatoes',

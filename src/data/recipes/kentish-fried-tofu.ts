@@ -1,6 +1,7 @@
 import {RecipeViewModel} from 'components/recipe';
 
 const recipe: RecipeViewModel = {
+  id: 'kft',
   name: 'Kentish Fried Tofu',
   ingredients: [
       '400g Smoked Tofu',

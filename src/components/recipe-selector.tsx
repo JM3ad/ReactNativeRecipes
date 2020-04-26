@@ -1,23 +1,18 @@
 import React from 'react';
-import {Button, Text, View} from 'react-native';
-import Recipe from 'components/recipe';
+import {Button, View} from 'react-native';
+import {RecipeViewModel} from 'components/recipe';
 
-const RecipeSelector: React.FC<RecipeSelectorProps> = ({recipe, isSelected, select}) => {
+const RecipeSelector: React.FC<RecipeSelectorProps> = ({recipe, navigation}) => {
   return <View>
-    {isSelected ? <Recipe recipe={recipe}></Recipe> : <Button onPress={select} title={recipe.name} />}
+    <Button title={recipe.name} onPress={() => {
+      navigation.navigate('Recipe', {recipe});
+    }}/>
   </View>;
 };
 
-export interface RecipeViewModel {
-  name: string;
-  ingredients: string[];
-  instructions: string[];
-}
-
 interface RecipeSelectorProps {
   recipe: RecipeViewModel;
-  isSelected: boolean;
-  select: () => void;
+  navigation: any;
 }
 
 export default RecipeSelector;
