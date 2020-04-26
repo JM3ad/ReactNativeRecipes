@@ -1,5 +1,5 @@
 # ReactNativeRecipes
-Playing with a React Native App
+Playing with React Native to build a simple recipes app
 
 # Zero to hero
 
@@ -8,9 +8,9 @@ Playing with a React Native App
 * `npm run start`
 
 ## Releasing
-Still working this out. 
-* expo publish publishes it to the expo webpage
-* expo build:android starts a build on the expo build server
-* Not sure if need to upload an apk after the first time?
+To be confirmed:
+* After initial release, `expo publish` should suffice for most releases of just JS changes
+* Otherwise `expo build:android` and roll out a release through [Google Console](https://play.google.com/apps/publish)
 
 ## Tests
+* `npm run test`

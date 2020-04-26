@@ -1,11 +1,10 @@
-import {RecipeModel} from 'components/recipe';
+import {RecipeViewModel} from 'components/recipe';
+import KentishFriedTofu from 'data/recipes/kentish-fried-tofu';
+import SmokeySpanishBeanStew from 'data/recipes/smokey-bean-stew';
 
-export const getRecipes: () => RecipeModel[] = () => {
+export const getRecipes: () => RecipeViewModel[] = () => {
   return [
-    {
-      name: 'Aubergine',
-      ingredients: 'Aubergine',
-      instructions: 'Aubergine',
-    },
+    KentishFriedTofu,
+    SmokeySpanishBeanStew,
   ];
 };

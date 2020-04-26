@@ -9,7 +9,8 @@
         "semicolon": [true, "always"],
         "max-line-length": [true, 150],
         "no-console": [true, "trace", "debug"],
-        "trailing-comma": true
+        "trailing-comma": true,
+        "no-empty": false
     },
     "rulesDirectory": []
 }
