@@ -8,9 +8,9 @@ Playing with React Native to build a simple recipes app
 * `npm run start`
 
 ## Releasing
-To be confirmed:
-* After initial release, `expo publish` should suffice for most releases of just JS changes
+* To release any JS changes, `expo publish` should suffice
 * Otherwise `expo build:android` and roll out a release through [Google Console](https://play.google.com/apps/publish)
+* iOS TBC
 
 ## Tests
 * `npm run test`
