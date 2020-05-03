@@ -20,9 +20,29 @@ export type RecipeScreenRouteProp = RouteProp<RootStackParamList, 'Recipe'>;
 const Stack = createStackNavigator<RootStackParamList>();
 
 const Router = () =>
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomePage}/>
-      <Stack.Screen name='Recipes' component={AllRecipes}/>
-      <Stack.Screen name='Recipe' component={RecipePage}/>
-    </Stack.Navigator>;
+  <Stack.Navigator screenOptions={navigationStyles}>
+    <Stack.Screen
+      name='Home'
+      component={HomePage}
+    />
+    <Stack.Screen
+      name='Recipes'
+      component={AllRecipes}
+    />
+    <Stack.Screen
+      name='Recipe'
+      component={RecipePage}
+    />
+  </Stack.Navigator>;
+
+const navigationStyles = {
+  headerStyle: {
+    backgroundColor: '#99EEEE'
+  },
+  headerTitleStyle: {
+    fontWeight: 'bold',
+    fontFamily: 'Merriweather',
+  }
+};
+
 export default Router;

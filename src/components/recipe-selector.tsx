@@ -1,12 +1,15 @@
 import React from 'react';
-import {Button, View} from 'react-native';
+import {View} from 'react-native';
 import {RecipeViewModel} from 'components/recipe';
+import AppButton from 'components/basic/app-button';
 
 const RecipeSelector: React.FC<RecipeSelectorProps> = ({recipe, navigation}) => {
+  const navigateToRecipe = () => {
+    navigation.navigate('Recipe', {recipe});
+  };
+
   return <View>
-    <Button title={recipe.name} onPress={() => {
-      navigation.navigate('Recipe', {recipe});
-    }}/>
+    <AppButton onPress={navigateToRecipe}>{recipe.name}</AppButton>
   </View>;
 };
 

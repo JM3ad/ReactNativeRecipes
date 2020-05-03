@@ -15,6 +15,7 @@
     "@react-navigation/stack": "^5.2.13",
     "@types/jest": "^25.2.1",
     "@types/react-router-native": "^5.1.0",
+    "@use-expo/font": "^2.0.0",
     "expo": "~37.0.3",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",

@@ -1,33 +1,18 @@
 import React from 'react';
-import {Button, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {HomeScreenNavigationProp} from 'router';
+import AppButton from 'components/basic/app-button';
+import AppHeader from 'components/basic/app-header';
+import PageLayout from 'layout/page-layout';
 
-const HomePage = ({navigation}: Props) => {
-  return (
-      <View style={styles.container}>
-        <ScrollView>
-          <Text style={styles.header}>Our Recipes</Text>
-          <Button onPress={() => navigation.navigate('Recipes')} title={'See All'}/>
-        </ScrollView>
-      </View>
-  );
-};
+const HomePage = ({navigation}: Props) => (
+  <PageLayout>
+    <AppHeader>Our Recipes</AppHeader>
+    <AppButton onPress={() => navigation.navigate('Recipes')}>See All</AppButton>
+  </PageLayout>
+);
 
 type Props = {
   navigation: HomeScreenNavigationProp;
 };
-
-const styles = StyleSheet.create({
-  header: {
-    fontSize: 20,
-    textAlign: 'center',
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default HomePage;

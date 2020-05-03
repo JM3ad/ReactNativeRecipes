@@ -1,12 +1,22 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
 import Router from 'router';
 import {NavigationContainer} from '@react-navigation/native';
+import {useFonts} from '@use-expo/font';
+import {AppLoading} from 'expo';
 
-const App = () => (
-    <NavigationContainer>
-      <Router/>
-    </NavigationContainer>
-);
+const App = () => {
+  const [fontsLoaded] = useFonts({
+    'Open Sans': require('./assets/fonts/Open Sans.ttf'),
+    'Merriweather': require('./assets/fonts/Merriweather-Regular.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
+  return <NavigationContainer>
+    <Router/>
+  </NavigationContainer>;
+};
 
 export default App;

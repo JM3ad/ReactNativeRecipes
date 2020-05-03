@@ -1,5 +1,8 @@
 import React from 'react';
-import {Button, FlatList, Text, View} from 'react-native';
+import {FlatList, View, StyleSheet} from 'react-native';
+import AppText from 'components/basic/app-text';
+import AppHeader from 'components/basic/app-header';
+import AppSubheader from 'components/basic/app-subheader';
 
 const Recipe: React.FC<RecipeProps> = ({recipe}) => {
   if (!recipe) {
@@ -7,30 +10,35 @@ const Recipe: React.FC<RecipeProps> = ({recipe}) => {
   }
 
   return <View>
-    <Button title={recipe.name} onPress={() => {
-    }}/>
-    <Text>Ingredients:</Text>
+    <AppHeader>{recipe.name}</AppHeader>
+    <AppSubheader>Ingredients:</AppSubheader>
     <FlatList
         data={recipe.ingredients}
         renderItem={({item}) =>
-            <Text>
+            <AppText style={styles.listItem}>
               * {item}
-            </Text>
+            </AppText>
         }
         keyExtractor={(ingredient, index) => String(index)}
     />
-    <Text>Instructions:</Text>
+    <AppSubheader>Instructions:</AppSubheader>
     <FlatList
         data={recipe.instructions}
         renderItem={({item}) =>
-            <Text>
+            <AppText style={styles.listItem}>
               * {item}
-            </Text>
+            </AppText>
         }
         keyExtractor={(instruction, index) => String(index)}
     />
-  </View>
+  </View>;
 };
+
+const styles = StyleSheet.create({
+  listItem: {
+    margin: 3,
+  }
+});
 
 export interface RecipeViewModel {
   id: string;
