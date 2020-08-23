@@ -6,10 +6,10 @@ import AppSubheader from 'components/basic/app-subheader';
 
 const Recipe: React.FC<RecipeProps> = ({recipe}) => {
   if (!recipe) {
-    return recipe;
+    return null;
   }
 
-  return <View>
+  return <View style={styles.recipeContainer}>
     <AppHeader>{recipe.name}</AppHeader>
     <AppSubheader>Ingredients:</AppSubheader>
     <FlatList
@@ -24,9 +24,9 @@ const Recipe: React.FC<RecipeProps> = ({recipe}) => {
     <AppSubheader>Instructions:</AppSubheader>
     <FlatList
         data={recipe.instructions}
-        renderItem={({item}) =>
+        renderItem={({item, index}) =>
             <AppText style={styles.listItem}>
-              * {item}
+              {index + 1}) {item}
             </AppText>
         }
         keyExtractor={(instruction, index) => String(index)}
@@ -37,7 +37,12 @@ const Recipe: React.FC<RecipeProps> = ({recipe}) => {
 const styles = StyleSheet.create({
   listItem: {
     margin: 3,
-  }
+  },
+  recipeContainer: {
+    marginBottom: '4rem',
+    marginLeft: '1rem',
+    marginRight: '1rem',
+  },
 });
 
 export interface RecipeViewModel {

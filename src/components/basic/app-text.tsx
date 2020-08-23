@@ -7,11 +7,11 @@ const AppText: React.FC<AppTextProps> = ({children, style}) => {
 
 const styles = StyleSheet.create({
   defaultTextStyle: {
-    fontFamily: 'Merriweather',
+    fontFamily: 'Merriweather, Arial',
     textAlign: 'center'
   },
   alternative: {
-    fontFamily: 'Open Sans',
+    fontFamily: 'Open Sans, Arial',
   }
 });
 
