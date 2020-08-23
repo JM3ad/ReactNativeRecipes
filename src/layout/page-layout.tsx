@@ -17,7 +17,7 @@ interface PageLayoutProps {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#CCEEEE',
+    backgroundColor: '#FFFFFF',
     alignItems: 'center',
     justifyContent: 'center',
   },

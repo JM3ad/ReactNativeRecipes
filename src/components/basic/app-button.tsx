@@ -2,12 +2,11 @@ import React, {ReactNode} from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import AppText from 'components/basic/app-text';
 
-const AppButton: React.FC<AppTextProps> = ({children, onPress}) => {
-
-  return <TouchableOpacity style={[styles.defaultButtonStyle]} onPress={onPress}>
+const AppButton: React.FC<AppTextProps> = ({children, onPress}) => (
+  <TouchableOpacity style={[styles.defaultButtonStyle]} onPress={onPress}>
     <AppText style={styles.buttonTextStyle}>{children}</AppText>
-  </TouchableOpacity>;
-};
+  </TouchableOpacity>
+);
 
 const styles = StyleSheet.create({
   defaultButtonStyle: {
